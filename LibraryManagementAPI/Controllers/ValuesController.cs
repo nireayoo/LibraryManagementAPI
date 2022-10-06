@@ -17,6 +17,21 @@ namespace LibraryManagementAPI.Controllers
         {
             return "hello from get all 1";
         }
+        [HttpGet("books/{id}")]
+        public string GetById(int id)
+        {
+            return "hello "+id;
+        }
+        [HttpGet("books/{id}/author/{authorid}")]
+        public string GetAuthorAddressById(int id, int authorId)
+        {
+            return "hello author address" + id + " "+ authorId;
+        }
+        [HttpGet("search")]
+        public string SearchBooks(int id, int authorId,string name,int price)
+        {
+            return "hello author address" + id + " " + authorId;
+        }
 
     }
 }
