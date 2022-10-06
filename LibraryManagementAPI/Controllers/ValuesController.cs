@@ -5,17 +5,18 @@ namespace LibraryManagementAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TestController : ControllerBase
+    public class ValuesController : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("get-all")]
         public string GetAll()
         {
-            return "Hello from Get";
+            return "hello from get all";
         }
-        [HttpGet("get-file1")]
-        public string Get1()
+        [HttpGet("get-all1")]
+        public string GetAll1()
         {
-            return "Hello from Get1";
+            return "hello from get all 1";
         }
+
     }
 }
