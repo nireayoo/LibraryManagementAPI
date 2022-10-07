@@ -7,7 +7,10 @@ namespace LibraryManagementAPI.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        [HttpGet("get-all")]
+        
+        [HttpGet]
+        [Route("[action]")]
+        
         public string GetAll()
         {
             return "hello from get all";
@@ -20,7 +23,7 @@ namespace LibraryManagementAPI.Controllers
         [HttpGet("books/{id}")]
         public string GetById(int id)
         {
-            return "hello "+id;
+            return "hello " + id;
         }
         [HttpGet("books/{id}/author/{authorid}")]
         public string GetAuthorAddressById(int id, int authorId)
