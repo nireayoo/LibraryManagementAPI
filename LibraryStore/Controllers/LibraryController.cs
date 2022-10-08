@@ -22,6 +22,7 @@ namespace LibraryStore.Controllers
             var books = await _libraryRepository.GetAllBooksAsync();
             return Ok(books);   
         }
+        ]
 
     }
 }
